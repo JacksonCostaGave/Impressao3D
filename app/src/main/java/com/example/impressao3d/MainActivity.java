@@ -7,10 +7,13 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     public TextView textViewHello;
+    Button btnCliente, btnProduto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,11 +22,39 @@ public class MainActivity extends AppCompatActivity {
 
         SharedPreferences impressao3d = getSharedPreferences("impressao3d", MODE_PRIVATE);
 
+        btnCliente = (Button) findViewById(R.id.btnCliente);
+        btnProduto = (Button) findViewById(R.id.btnProduto);
+
+        btnCliente.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                abrirTelaCliente();
+            }
+        });
+
+        btnProduto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                abrirTelaProduto();
+            }
+        });
+
         textViewHello = (TextView) findViewById(R.id.textViewHello);
 
         String user = impressao3d.getString("user","");
         textViewHello.setText("Olá "+user+"!");
     }
+
+    public void abrirTelaCliente(){
+        Intent intent = new Intent(this, ClienteActivity.class);
+        startActivity(intent);
+    }
+
+    public void abrirTelaProduto(){
+        Intent intent = new Intent(this, ProdutoActivity.class);
+        startActivity(intent);
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
