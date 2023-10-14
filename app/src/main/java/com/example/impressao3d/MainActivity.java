@@ -4,21 +4,29 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
-    public TextView textViewHello;
-    Button btnCliente, btnProduto;
+    private SQLiteDatabase bancoDados;
+    private TextView textViewHello;
+    private Button btnCliente, btnProduto;
+    private ArrayList<Integer> arrayIds;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        criarBancoDados();
 
         SharedPreferences impressao3d = getSharedPreferences("impressao3d", MODE_PRIVATE);
 
@@ -43,6 +51,26 @@ public class MainActivity extends AppCompatActivity {
 
         String user = impressao3d.getString("user","");
         textViewHello.setText("Olá "+user+"!");
+    }
+
+    public void criarBancoDados(){
+        try{
+            bancoDados = openOrCreateDatabase("impressao3d", MODE_PRIVATE, null);
+            bancoDados.execSQL("CREATE TABLE IF NOT EXISTS pessoa(" +
+                    " id INTEGER PRIMARY KEY AUTOINCREMENT" +
+                    ", nome VARCHAR" +
+                    ", email VARCHAR" +
+                    ", celular VARCHAR)");
+            bancoDados.execSQL("CREATE TABLE IF NOT EXISTS produto(" +
+                    " id INTEGER PRIMARY KEY AUTOINCREMENT" +
+                    ", tipo VARCHAR" +
+                    ", nome VARCHAR" +
+                    ", cor VARCHAR" +
+                    ", preco FLOAT)");
+            bancoDados.close();
+        } catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     public void abrirTelaCliente(){

@@ -26,8 +26,8 @@ public class LoginActivity extends AppCompatActivity {
 
         criarBancoDados();
 
-        editTextLogin = (EditText) findViewById(R.id.editTextUsuario);
-        editTextSenha = (EditText) findViewById(R.id.editTextSenha);
+        editTextLogin = (EditText) findViewById(R.id.editTextNome);
+        editTextSenha = (EditText) findViewById(R.id.editTextEmail);
         buttonEntrarLogin = (Button) findViewById(R.id.buttonEntrarLogin);
         textViewCadastrarLogin = (TextView) findViewById(R.id.textViewCadastrarLogin);
 

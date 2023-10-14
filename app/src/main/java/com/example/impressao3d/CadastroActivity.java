@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class CadastroActivity extends AppCompatActivity {
     SQLiteDatabase bancoDados;
@@ -20,8 +21,8 @@ public class CadastroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
 
-        editTextUsuario = (EditText) findViewById(R.id.editTextUsuario);
-        editTextSenha = (EditText) findViewById(R.id.editTextSenha);
+        editTextUsuario = (EditText) findViewById(R.id.editTextNome);
+        editTextSenha = (EditText) findViewById(R.id.editTextEmail);
         buttonCadastrar = (Button) findViewById(R.id.buttonEntrarLogin);
 
         buttonCadastrar.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +48,7 @@ public class CadastroActivity extends AppCompatActivity {
                 stmt.executeInsert();
                 bancoDados.close();
                 finish();
+                Toast.makeText(this, "Usuário cadastrado com sucesso!", Toast.LENGTH_SHORT).show();
             } catch (Exception e) {
                 e.printStackTrace();
             }

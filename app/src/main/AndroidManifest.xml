@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Impressao3D">
         <activity
+            android:name=".CadastrarClienteActivity"
+            android:exported="true" />
+        <activity
             android:name=".ProdutoActivity"
             android:exported="true" />
         <activity
