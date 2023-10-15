@@ -12,7 +12,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -29,9 +28,9 @@ public class ClienteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cliente);
 
-//        listViewDados = (ListView) findViewById(R.id.listViewDados);
+        listViewDados = (ListView) findViewById(R.id.listViewDados2);
         btnCadastrarCliente = (Button) findViewById(R.id.btnCadastrarCliente);
-        //listarDados();
+        listarDados();
         btnCadastrarCliente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -89,19 +88,12 @@ public class ClienteActivity extends AppCompatActivity {
             listViewDados.setAdapter(meuAdapter);
             meuCursor.moveToFirst();
             while(meuCursor!=null){
+                arrayIds.add(meuCursor.getInt(0));
                 linhas.add(meuCursor.getString(1));
                 linhas.add(meuCursor.getString(2));
                 linhas.add(meuCursor.getString(3));
                 meuCursor.moveToNext();
             }
-//            meuCursor2.moveToFirst();
-//            while(meuCursor2!=null){
-//                linhas.add(meuCursor2.getString(1));
-//                linhas.add(meuCursor2.getString(2));
-//                linhas.add(meuCursor2.getString(3));
-//                linhas.add(meuCursor2.getString(4));
-//                meuCursor2.moveToNext();
-//            }
         } catch (Exception e){
             e.printStackTrace();
         }
