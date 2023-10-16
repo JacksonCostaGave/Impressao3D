@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         criarBancoDados();
-//        inserirDadosTemp();
+        inserirDadosTemp();
 
         SharedPreferences impressao3d = getSharedPreferences("impressao3d", MODE_PRIVATE);
 
@@ -119,15 +119,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void abrirTelaCliente(){
-        Intent intent = new Intent(this, Cliente_Activity.class);
-        startActivity(intent);
+        Intent intentC = new Intent(this, Cliente_Activity.class);
+        startActivity(intentC);
     }
 
     public void abrirTelaProduto(){
-        Intent intent = new Intent(this, Produto_Activity.class);
-        startActivity(intent);
+        Intent intentP = new Intent(this, Produto_Activity.class);
+        startActivity(intentP);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -136,16 +135,22 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.sair:
-                sair();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        switch (item.getItemId()) {
+//            case R.id.sair:
+//                sair();
+//                return true;
+//            case R.id.acessarCliente:
+//                abrirTelaCliente();
+//                return true;
+//            case R.id.acessarProduto:
+//                abrirTelaProduto();
+//                return true;
+//            default:
+//                return super.onOptionsItemSelected(item);
+//        }
+//    }
 
     public void sair(){
         SharedPreferences impressao3d = getSharedPreferences("impressao3d", MODE_PRIVATE);

@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:id="@+id/item1"
-        android:title="Item um" />
-    <item
-        android:id="@+id/item2"
-        android:title="Item dois" />
-    <item
-        android:id="@+id/item3"
-        android:title="Item três" />
+<!--    <item-->
+<!--        android:id="@+id/acessarCliente"-->
+<!--        android:title="Cliente" />-->
+<!--    <item-->
+<!--        android:id="@+id/acessarProduto"-->
+<!--        android:title="Produto" />-->
     <item
         android:id="@+id/sair"
         android:icon="@android:drawable/ic_lock_power_off"

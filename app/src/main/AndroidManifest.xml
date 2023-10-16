@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Impressao3D">
         <activity
+            android:name=".Produto_Editar_Activity"
+            android:exported="true" />
+        <activity
+            android:name=".Produto_Cadastro_Activity"
+            android:exported="true" />
+        <activity
             android:name=".Cliente_Editar_Activity"
             android:exported="true" />
         <activity

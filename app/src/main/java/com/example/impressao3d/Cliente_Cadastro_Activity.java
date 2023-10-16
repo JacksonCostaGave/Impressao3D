@@ -41,7 +41,7 @@ public class Cliente_Cadastro_Activity extends AppCompatActivity {
             }
         });
     }
-//
+
     public void cadastrar(){
         if(TextUtils.isEmpty(editTextNome3.getText().toString())){
             editTextNome3.setError("Digite um Nome!");

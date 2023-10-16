@@ -4,16 +4,16 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Gave/AndroidStudioProjects/Impressao3D/app/src/main/res/layout/activity_cadastro.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Gave/AndroidStudioProjects/Impressao3D/app/src/main/res/layout/activity_cliente.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Gave/AndroidStudioProjects/Impressao3D/app/src/main/res/layout/activity_cliente_cadastrar.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Gave/AndroidStudioProjects/Impressao3D/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Gave/AndroidStudioProjects/Impressao3D/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/Gave/AndroidStudioProjects/Impressao3D/app/src/main/res/layout/activity_produto.xml" value="0.23867753623188406" />
+        <entry key="..\:/Users/Gave/AndroidStudioProjects/Impressao3D/app/src/main/res/layout/activity_produto_cadastro.xml" value="0.23867753623188406" />
+        <entry key="..\:/Users/Gave/AndroidStudioProjects/Impressao3D/app/src/main/res/layout/activity_produto_editar.xml" value="0.23867753623188406" />
         <entry key="..\:/Users/Gave/AndroidStudioProjects/Impressao3D/app/src/main/res/menu/main_menu.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/render/StudioProjects/Impressao3D/app/src/main/res/layout/activity_cadastrar_cliente.xml" value="0.22" />
-        <entry key="..\:/Users/render/StudioProjects/Impressao3D/app/src/main/res/layout/activity_cadastro.xml" value="0.25" />
-        <entry key="..\:/Users/render/StudioProjects/Impressao3D/app/src/main/res/layout/activity_cliente.xml" value="0.2" />
-        <entry key="..\:/Users/render/StudioProjects/Impressao3D/app/src/main/res/layout/activity_editar_cliente.xml" value="0.2069402228976697" />
+        <entry key="..\:/Users/render/StudioProjects/Impressao3D/app/src/main/res/layout/activity_cadastro.xml" value="0.42552083333333335" />
         <entry key="..\:/Users/render/StudioProjects/Impressao3D/app/src/main/res/layout/activity_login.xml" value="0.42552083333333335" />
-        <entry key="..\:/Users/render/StudioProjects/Impressao3D/app/src/main/res/layout/activity_main.xml" value="0.42552083333333335" />
-        <entry key="..\:/Users/render/StudioProjects/Impressao3D/app/src/main/res/layout/activity_produto.xml" value="0.2069402228976697" />
         <entry key="..\:/Users/render/StudioProjects/Impressao3D/app/src/main/res/menu/main_menu.xml" value="0.42552083333333335" />
       </map>
     </option>
