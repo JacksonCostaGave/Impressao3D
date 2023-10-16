@@ -4,21 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CadastrarClienteActivity">
+    tools:context=".EditarClienteActivity">
 
     <TextView
-        android:id="@+id/textViewCadastrarClientes"
+        android:id="@+id/textViewEditarClientes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="CADASTRAR CLIENTE"
+        android:text="EDITAR CLIENTE"
         app:autoSizeTextType="uniform"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextNome3"
+        android:id="@+id/editTextNome2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -29,11 +29,11 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewCadastrarClientes"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEditarClientes"
         tools:ignore="DuplicateClickableBoundsCheck" />
 
     <EditText
-        android:id="@+id/editTextEmail3"
+        android:id="@+id/editTextEmail2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -44,10 +44,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNome3" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNome2" />
 
     <EditText
-        android:id="@+id/editTextCelular3"
+        android:id="@+id/editTextCelular2"
         style="t"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -59,24 +59,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmail3" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail2" />
 
     <Button
 
-        android:id="@+id/buttonCadastrarCliente"
+        android:id="@+id/buttonEditarCliente"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="Cadastrar"
-        app:layout_constraintEnd_toStartOf="@+id/btnRetornar2"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:text="EDITAR"
+        app:layout_constraintEnd_toStartOf="@+id/btnRetornar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextCelular3" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCelular2" />
 
     <Button
-        android:id="@+id/btnRetornar2"
+        android:id="@+id/btnRetornar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -84,8 +83,8 @@
         android:layout_marginEnd="8dp"
         android:text="RETORNAR"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonCadastrarCliente"
-        app:layout_constraintTop_toBottomOf="@+id/editTextCelular3" />
+        app:layout_constraintStart_toEndOf="@+id/buttonEditarCliente"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCelular2" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

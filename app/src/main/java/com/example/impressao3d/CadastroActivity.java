@@ -14,18 +14,18 @@ import android.widget.Toast;
 public class CadastroActivity extends AppCompatActivity {
     SQLiteDatabase bancoDados;
     EditText editTextUsuario,editTextSenha;
-    Button buttonEntrar, buttonCadastrar;
+    Button buttonCadastrarUsuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
 
-        editTextUsuario = (EditText) findViewById(R.id.editTextNome);
-        editTextSenha = (EditText) findViewById(R.id.editTextEmail);
-        buttonCadastrar = (Button) findViewById(R.id.buttonEntrarLogin);
+        editTextUsuario = (EditText) findViewById(R.id.editTextUsuario);
+        editTextSenha = (EditText) findViewById(R.id.editTextSenha);
+        buttonCadastrarUsuario = (Button) findViewById(R.id.buttonCadastrarUsuario);
 
-        buttonCadastrar.setOnClickListener(new View.OnClickListener() {
+        buttonCadastrarUsuario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 cadastrar();

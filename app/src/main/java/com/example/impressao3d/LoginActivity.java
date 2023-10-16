@@ -16,7 +16,7 @@ import android.widget.Toast;
 public class LoginActivity extends AppCompatActivity {
     SQLiteDatabase bancoDados;
     EditText editTextLogin,editTextSenha;
-    Button buttonEntrarLogin, buttonCadastrarLogin;
+    Button buttonEntrar;
     TextView textViewCadastrarLogin;
 
     @Override
@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
 
         editTextLogin = (EditText) findViewById(R.id.editTextNome);
         editTextSenha = (EditText) findViewById(R.id.editTextEmail);
-        buttonEntrarLogin = (Button) findViewById(R.id.buttonEntrarLogin);
+        buttonEntrar = (Button) findViewById(R.id.buttonEntrar);
         textViewCadastrarLogin = (TextView) findViewById(R.id.textViewCadastrarLogin);
 
         textViewCadastrarLogin.setOnClickListener(new View.OnClickListener() {
@@ -37,14 +37,8 @@ public class LoginActivity extends AppCompatActivity {
                 abrirCadastro();
             }
         });
-//        buttonCadastrarLogin.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                abrirCadastro();
-//            }
-//        });
 
-        buttonEntrarLogin.setOnClickListener(new View.OnClickListener() {
+        buttonEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 entrar();

@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         criarBancoDados();
-//        inserirDadosTemp();
+        inserirDadosTemp();
 
         SharedPreferences impressao3d = getSharedPreferences("impressao3d", MODE_PRIVATE);
 
@@ -65,10 +65,9 @@ public class MainActivity extends AppCompatActivity {
                     ", celular VARCHAR)");
             bancoDados.execSQL("CREATE TABLE IF NOT EXISTS produto(" +
                     " id INTEGER PRIMARY KEY AUTOINCREMENT" +
-                    ", tipo VARCHAR" +
                     ", nome VARCHAR" +
                     ", cor VARCHAR" +
-                    ", preco FLOAT)");
+                    ", valor FLOAT)");
             bancoDados.close();
         } catch (Exception e){
             e.printStackTrace();
@@ -96,25 +95,22 @@ public class MainActivity extends AppCompatActivity {
             stmt.bindString(3,"17 98957-1256");
             stmt.executeInsert();
 
-            String sql2 = "INSERT INTO produto (tipo,nome,cor,preco) VALUES (?,?,?,?)";
+            String sql2 = "INSERT INTO produto (nome,cor,valor) VALUES (?,?,?)";
             SQLiteStatement stmt2 = bancoDados.compileStatement(sql2);
 
-            stmt2.bindString(1,"Filamento");
-            stmt2.bindString(2,"ABS");
-            stmt2.bindString(3,"Preto");
-            stmt2.bindLong(4,100);
+            stmt2.bindString(1,"ABS");
+            stmt2.bindString(2,"Preto");
+            stmt2.bindLong(3,100);
             stmt2.executeInsert();
 
-            stmt2.bindString(1,"Filamento");
-            stmt2.bindString(2,"PLA");
-            stmt2.bindString(3,"Branco");
-            stmt2.bindLong(4,120);
+            stmt2.bindString(1,"PLA");
+            stmt2.bindString(2,"Branco");
+            stmt2.bindLong(3,120);
             stmt2.executeInsert();
 
-            stmt2.bindString(1,"Impressora 3D");
-            stmt2.bindString(2,"Creality Ender 3 S1");
-            stmt2.bindString(3,"Preto");
-            stmt2.bindLong(4,3500);
+            stmt2.bindString(1,"Creality Ender 3 S1");
+            stmt2.bindString(2,"Preto");
+            stmt2.bindLong(3,3500);
             stmt2.executeInsert();
 
             bancoDados.close();

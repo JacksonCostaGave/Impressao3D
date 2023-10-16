@@ -71,7 +71,7 @@ public class ProdutoActivity extends AppCompatActivity {
         try{
             arrayIds = new ArrayList<>();
             bancoDados = openOrCreateDatabase("impressao3d", MODE_PRIVATE, null);
-            Cursor meuCursor2 = bancoDados.rawQuery("SELECT id, tipo, nome, cor, preco FROM produto", null);
+            Cursor meuCursor2 = bancoDados.rawQuery("SELECT id, nome, cor, valor FROM produto", null);
             ArrayList<String> linhas = new ArrayList<String>();
             ArrayAdapter meuAdapter = new ArrayAdapter<String>(
                     this,
@@ -83,10 +83,7 @@ public class ProdutoActivity extends AppCompatActivity {
             meuCursor2.moveToFirst();
             while(meuCursor2!=null){
                 arrayIds.add(meuCursor2.getInt(0));
-                linhas.add(meuCursor2.getString(1));
-                linhas.add(meuCursor2.getString(2));
-                linhas.add(meuCursor2.getString(3));
-                linhas.add(meuCursor2.getString(4));
+                linhas.add("Nome: " + meuCursor2.getString(1) + " | " + "Cor: " + meuCursor2.getString(2) + " | " + "Valor: " + meuCursor2.getString(3));
                 meuCursor2.moveToNext();
             }
         } catch (Exception e){
