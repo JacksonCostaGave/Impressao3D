@@ -11,7 +11,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -28,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         criarBancoDados();
-        inserirDadosTemp();
+//        inserirDadosTemp();
 
         SharedPreferences impressao3d = getSharedPreferences("impressao3d", MODE_PRIVATE);
 
@@ -120,12 +119,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void abrirTelaCliente(){
-        Intent intent = new Intent(this, ClienteActivity.class);
+        Intent intent = new Intent(this, Cliente_Activity.class);
         startActivity(intent);
     }
 
     public void abrirTelaProduto(){
-        Intent intent = new Intent(this, ProdutoActivity.class);
+        Intent intent = new Intent(this, Produto_Activity.class);
         startActivity(intent);
     }
 
@@ -153,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = impressao3d.edit();
         editor.clear();
         editor.commit();
-        Intent intent = new Intent(this,LoginActivity.class);
+        Intent intent = new Intent(this, Usuario_Login_Activity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }

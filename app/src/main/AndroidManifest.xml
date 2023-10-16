@@ -10,22 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Impressao3D">
         <activity
-            android:name=".EditarClienteActivity"
+            android:name=".Cliente_Editar_Activity"
             android:exported="true" />
         <activity
-            android:name=".CadastrarClienteActivity"
+            android:name=".Cliente_Cadastro_Activity"
             android:exported="true" />
         <activity
-            android:name=".ProdutoActivity"
+            android:name=".Produto_Activity"
             android:exported="true" />
         <activity
-            android:name=".ClienteActivity"
+            android:name=".Cliente_Activity"
             android:exported="true" />
         <activity
-            android:name=".CadastroActivity"
+            android:name=".Usuario_Cadastro_Activity"
             android:exported="true" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".Usuario_Login_Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

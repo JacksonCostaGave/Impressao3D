@@ -16,7 +16,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class ProdutoActivity extends AppCompatActivity {
+public class Produto_Activity extends AppCompatActivity {
     private SQLiteDatabase bancoDados;
     public ListView listViewDados2;
     public ArrayList<Integer> arrayIds;
@@ -62,7 +62,7 @@ public class ProdutoActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = impressao3d.edit();
         editor.clear();
         editor.commit();
-        Intent intent = new Intent(this,LoginActivity.class);
+        Intent intent = new Intent(this, Usuario_Login_Activity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }

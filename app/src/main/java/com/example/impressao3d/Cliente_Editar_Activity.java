@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class EditarClienteActivity extends AppCompatActivity {
+public class Cliente_Editar_Activity extends AppCompatActivity {
     Integer id;
     EditText editTextNome2, editTextEmail2,editTextCelular2;
     Button buttonEditarCliente, btnRetornar;
@@ -21,7 +21,7 @@ public class EditarClienteActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_editar_cliente);
+        setContentView(R.layout.activity_cliente_editar);
 
         buttonEditarCliente = (Button) findViewById(R.id.buttonEditarCliente);
         btnRetornar = (Button) findViewById(R.id.btnRetornar);

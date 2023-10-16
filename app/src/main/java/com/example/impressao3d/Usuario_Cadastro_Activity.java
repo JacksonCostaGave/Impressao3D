@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class CadastroActivity extends AppCompatActivity {
+public class Usuario_Cadastro_Activity extends AppCompatActivity {
     SQLiteDatabase bancoDados;
     EditText editTextUsuario,editTextSenha;
     Button buttonCadastrarUsuario;
@@ -19,7 +19,7 @@ public class CadastroActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cadastro);
+        setContentView(R.layout.activity_usuario_cadastro);
 
         editTextUsuario = (EditText) findViewById(R.id.editTextUsuario);
         editTextSenha = (EditText) findViewById(R.id.editTextSenha);

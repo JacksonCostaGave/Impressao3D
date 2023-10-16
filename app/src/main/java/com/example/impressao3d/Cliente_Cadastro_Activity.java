@@ -11,9 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.sql.SQLClientInfoException;
-
-public class CadastrarClienteActivity extends AppCompatActivity {
+public class Cliente_Cadastro_Activity extends AppCompatActivity {
     private SQLiteDatabase bancoDados;
     Button buttonCadastrarCliente, btnRetornar2;
     EditText editTextNome3, editTextEmail3, editTextCelular3;
@@ -21,7 +19,7 @@ public class CadastrarClienteActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cadastrar_cliente);
+        setContentView(R.layout.activity_cliente_cadastrar);
 
         buttonCadastrarCliente = (Button) findViewById(R.id.buttonCadastrarCliente);
         btnRetornar2 = (Button) findViewById(R.id.btnRetornar2);

@@ -13,7 +13,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class LoginActivity extends AppCompatActivity {
+public class Usuario_Login_Activity extends AppCompatActivity {
     SQLiteDatabase bancoDados;
     EditText editTextLogin,editTextSenha;
     Button buttonEntrar;
@@ -22,7 +22,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_usuario_login);
 
         criarBancoDados();
 
@@ -60,7 +60,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void abrirCadastro(){
-        Intent intent = new Intent(this, CadastroActivity.class);
+        Intent intent = new Intent(this, Usuario_Cadastro_Activity.class);
         startActivity(intent);
     }
 

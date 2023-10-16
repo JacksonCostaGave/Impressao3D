@@ -20,7 +20,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class ClienteActivity extends AppCompatActivity {
+public class Cliente_Activity extends AppCompatActivity {
     private SQLiteDatabase bancoDados;
     public ListView listViewDados2;
     public ArrayList<Integer> arrayIds;
@@ -71,12 +71,12 @@ public class ClienteActivity extends AppCompatActivity {
     }
 
     public void abrirTelaCadastro(){
-        Intent intent1 = new Intent(this,CadastrarClienteActivity.class);
+        Intent intent1 = new Intent(this, Cliente_Cadastro_Activity.class);
         startActivity(intent1);
     }
 
     public void abrirTelaEditar(Integer id){
-        Intent intent2 = new Intent ( this, EditarClienteActivity.class);
+        Intent intent2 = new Intent ( this, Cliente_Editar_Activity.class);
         intent2.putExtra("id", id);
         startActivity(intent2);
     }
@@ -104,7 +104,7 @@ public class ClienteActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = impressao3d.edit();
         editor.clear();
         editor.commit();
-        Intent intent = new Intent(this,LoginActivity.class);
+        Intent intent = new Intent(this, Usuario_Login_Activity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
@@ -135,7 +135,7 @@ public class ClienteActivity extends AppCompatActivity {
     }
 
     public void confirmaExcluir() {
-        AlertDialog.Builder msgBox = new AlertDialog.Builder(ClienteActivity.this);
+        AlertDialog.Builder msgBox = new AlertDialog.Builder(Cliente_Activity.this);
         msgBox.setTitle("Excluir");
         msgBox.setIcon(android.R.drawable.ic_menu_delete);
         msgBox.setMessage("Você realmente deseja excluir esse registro?");
